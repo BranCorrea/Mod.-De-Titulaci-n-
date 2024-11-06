@@ -86,12 +86,12 @@ button{
 }
 
 footer{
-    height: auto;
+    height: 150px;
     background-color: rgb(3, 4, 71);
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 35px;
+    padding: 28px;
     color: #cdcfd1;
 }
 
@@ -276,4 +276,17 @@ button:hover {
 
 h5{
     text-align: center;
+}
+
+.ft{
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}
+
+#foot{
+    margin-left: 150px;
+    margin-right: 80px;
+    border-right: #ffffff solid 2px;
+    padding-right: 120px;
 }
