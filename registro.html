@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,74 +6,113 @@
     <title>Met. Titulacion</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body id="registro">
+<body>
     <header>
-        <a href=""> <img src="img/escudo.png" alt="logos institucion"></a> 
+        <a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio"> <img src="img/escudo.png" alt="logos institucion"></a> 
         <h2 id="tit1">FACULTAD DE ESTUDIOS SUPERIORES <br><span> ARAGON</span></h2>
         <h2 id="tit">METODOS DE TITULACION <br>INGENIERIA EN COMPUTACION.</h2>
         <div><a id="inicio" href="index.html">INICIO</a></div>
-        <a href="#"><img id="aragonEscudo" src="img/aragonlogo.png" alt="escudo escuela"></a>
+        <div><a id="sesion" href="index.html">INICIAR SESION</a></div>
+        <a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio"><img id="aragonEscudo" src="img/aragonlogo.png" alt="escudo escuela"></a>
     </header>
-    <div class="RegistroTitu">
-        <form>
-        <h2 id="tit2">REGISTRA TU FORMA DE TITULACION</h2><br>
-        <h5>PLAN DE ESTUDIOS</h5>
-        <div id="radios">
-        <input class="radio" type="radio" name="planEstu" value="80-82">8082
-        <input class="radio" type="radio" name="planEstu" value="1279">1279
-        <input class="radio" type="radio" name="planEstu" value="2119">2119
+    <div class="contenedorprinc">
+        <div class="planes">
+            <h2>BIENVENIDO</h2>
+            <button onclick="showForm('login')">REGISTRO</button>
+            <button onclick="showForm('register')">INICIAR SESION</button>
         </div>
-    
-       <input id="nombre" type="text" name="nombre" placeholder="Introduce tu Nombre"> <br>
-        <input id="apellido1" type="text" name="apellido1" placeholder="Introduce tu Primer Apellido"> <br>
-        <input id="apellido2" type="text" name="apellido2" placeholder="Introduce tu Segundo Apellido"> <br>
-        <input id="email" type="email" name="email" placeholder="Correo Electronico"> <br>
-        <input id="nCuenta" type="number" name="nCuenta" placeholder="Numero de cuenta"> <br>
-        <input type="list" list="semestre" placeholder="Selecciona tu Semestre"><br>
-        <datalist id="semestre">
-    <option value="1 Semestre"></option>
-    <option value="2 Semestre"></option> 
-    <option value="3 Semestre"></option> 
-    <option value="4 Semestre"></option> 
-    <option value="5 Semestre"></option> 
-    <option value="6 Semestre"></option> 
-    <option value="7 Semestre"></option> 
-    <option value="8 Semestre"></option> 
-    <option value="9 Semestre"></option> 
-    <option value="10 Semestre"></option> 
-        </datalist>
 
-        <input type="list" list="Metodo de Titulacion" placeholder="Selecciona tu Metodo de Titulacion"><br>
-        <datalist id="Metodo de Titulacion">
-    <option value="1 Semestre"></option>
-    <option value="2 Semestre"></option> 
-    <option value="3 Semestre"></option> 
-    <option value="4 Semestre"></option> 
-    <option value="5 Semestre"></option> 
-    <option value="6 Semestre"></option> 
-    <option value="7 Semestre"></option> 
-    <option value="8 Semestre"></option> 
-    <option value="9 Semestre"></option> 
-    <option value="10 Semestre"></option> 
-        </datalist>
-        <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
-        
+        <div class="acerca">
+            <h2 id="texto">SOBRE LA CARRERA</h2>
+            <p id="textoCar">La carrera de Ingeniería en Computación tiene el objetivo de formar profesionales líderes con conocimientos teóricos y prácticos para la solución de problemas computacionales, comprometidos con las necesidades y desarrollo del país. <br><br>
+
+                Asimismo, contarán con un gran espíritu universitario, compromiso con el crecimiento del país, capacidades para encontrar soluciones innovadoras y un alto nivel de conocimientos en matemáticas, programación e ingeniería de software, procesamiento de la información, arquitectura de computadoras, redes, seguridad y control. <br><br>
+                
+                Nuestra visión es ser una carrera de vanguardia que asegure la actualización constante de su planta docente, infraestructura y planes de estudio, que cuente con una comunidad egresada capaz responder a los cambios que demande el país.</p>
+            <div><iframe width="560" height="315" src="https://www.youtube.com/embed/hI3vvGqRxjg?si=ayMFqU4UP68Nui6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+
+        <div id="loginForm" class="form-container">
+            <form>
+                <h2 id="tit2">REGISTRA TU FORMA DE TITULACION</h2>
+                <h5>PLAN DE ESTUDIOS</h5>
+                <div id="radios">
+                    <input class="radio" type="radio" name="planEstu" value="80-82">8082
+                    <input class="radio" type="radio" name="planEstu" value="1279">1279
+                    <input class="radio" type="radio" name="planEstu" value="2119">2119
+                </div><br>
+                <label for="nombre">Nombre:         </label><input id="nombre" type="text" name="nombre"> <br>
+                <label for="apellido1">Primer Apellido:</label><input id="apellido1" type="text" name="apellido1"> <br>
+                <label for="apellido2">Segundo Apellido:</label><input id="apellido2" type="text" name="apellido2"> <br>
+                <label for="email">Correo Electronico</label><input id="email" type="email" name="email"> <br>
+                <label for="nCuenta">Numero de Cuenta:</label><input id="nCuenta" type="number" name="nCuenta"> <br>
+                <label for="list">Selecciona Tu Semestre</label><input type="list" list="semestre"><br>
+                <datalist id="semestre">
+                    <option value="1 Semestre"></option>
+                    <option value="2 Semestre"></option> 
+                    <option value="3 Semestre"></option> 
+                    <option value="4 Semestre"></option> 
+                    <option value="5 Semestre"></option> 
+                    <option value="6 Semestre"></option> 
+                    <option value="7 Semestre"></option> 
+                    <option value="8 Semestre"></option> 
+                    <option value="9 Semestre"></option> 
+                    <option value="10 Semestre"></option> 
+                </datalist>
+                <label for="metodo">Metodo De Titulacion:</label><input id="metodo" type="list" list="Metodo de Titulacion"><br>
+                <datalist id="Metodo de Titulacion">
+                    <option value="1 Semestre"></option>
+                    <option value="2 Semestre"></option> 
+                    <option value="3 Semestre"></option> 
+                    <option value="4 Semestre"></option> 
+                    <option value="5 Semestre"></option> 
+                    <option value="6 Semestre"></option> 
+                    <option value="7 Semestre"></option> 
+                    <option value="8 Semestre"></option> 
+                    <option value="9 Semestre"></option> 
+                    <option value="10 Semestre"></option> 
+                </datalist>
+                <label for="contraseña">Contraseña</label><input id="contra" type="text" name="contraseña"> <br>
+                <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
+            </form>
+        </div>
+
+        <div id="registerForm" class="form-container1">
+            <form>
+                <h2 id="tit2">INICIAR SESION</h2><br>
+                <label for="registerName">Numero de Cuenta:</label>
+                <input type="text" id="registerName" required><br>
+                <label for="registerEmail">Correo:</label>
+                <input type="email" id="registerEmail" required><br>
+                <label for="registerPassword">Contraseña:</label>
+                <input type="password" id="registerPassword" required><br>
+                <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
+            </form>
+        </div>
     </div>
-    </form>
-
 
     <footer>
         <div class="footer">
-           <div class="ft"> <p id="footerText">Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2023. Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica. De otra forma, requiere permiso previo por escrito de la institución.</p></div>
-            <div class="ft">
-                <h6>Teléfono(s)</h6>
-                <p>55 5623 0222 <br></h6>
-                <h6>Correo electrónico</h6>
-                <a class="correo" href="st.computacion@aragon.unam.mx">st.computacion@aragon.unam.mx</a><br>
-                <a class="correo" href="computacion@aragon.unam.mx">computacion@aragon.unam.mx</a>
-            </div>
+            <div class="ft"> <p id="footerText">Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2023...</p></div>
         </div>
     </footer>
 
+    <script>
+        function showForm(formType) {
+            // Ocultar los formularios
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'none';
+            
+            // Ocultar el div con la clase 'acerca'
+            document.querySelector('.acerca').style.display = 'none';
+
+            // Mostrar el formulario correspondiente
+            if (formType === 'login') {
+                document.getElementById('loginForm').style.display = 'block';
+            } else if (formType === 'register') {
+                document.getElementById('registerForm').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
