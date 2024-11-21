@@ -26,14 +26,19 @@ $metodo = $_POST['metodo'];
 $query = "INSERT INTO datos (planEstu, nombre, apellido1, apellido2, correo, nCuenta, semestre, metodo, contraseña) 
           VALUES ('$planEstu', '$nombre', '$apellido1', '$apellido2', '$correo', '$nCuenta', '$semestre', '$metodo', '$contraseña')";
 
-// Mostrar la consulta para depuración
-echo "<pre>Consulta SQL: $query</pre>";
-
 // Ejecutar la consulta
 if (mysqli_query($conexion, $query)) {
-    echo "Datos guardados correctamente.";
+    // Si la inserción fue exitosa, mostrar un mensaje de éxito
+    echo "<script>
+            alert('¡Datos enviados correctamente!');
+            window.location.href = 'formulario.html'; // Redirigir al formulario original
+          </script>";
 } else {
-    echo "Error al guardar los datos: " . mysqli_error($conexion);
+    // Si hubo un error al guardar los datos
+    echo "<script>
+            alert('Error al guardar los datos: " . mysqli_error($conexion) . "');
+            window.location.href = 'formulario.html'; // Redirigir al formulario original
+          </script>";
 }
 
 // Cerrar la conexión
