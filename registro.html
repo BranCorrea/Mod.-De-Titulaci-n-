@@ -33,7 +33,7 @@
         </div>
 
         <div id="loginForm" class="form-container">
-            <form>
+            <form action="index.php" method="post">
                 <h2 id="tit2">REGISTRA TU FORMA DE TITULACION</h2>
                 <h5>PLAN DE ESTUDIOS</h5>
                 <div id="radios">
@@ -41,55 +41,76 @@
                     <input class="radio" type="radio" name="planEstu" value="1279">1279
                     <input class="radio" type="radio" name="planEstu" value="2119">2119
                 </div><br>
-                <label for="nombre">Nombre:         </label><input id="nombre" type="text" name="nombre"> <br>
-                <label for="apellido1">Primer Apellido:</label><input id="apellido1" type="text" name="apellido1"> <br>
-                <label for="apellido2">Segundo Apellido:</label><input id="apellido2" type="text" name="apellido2"> <br>
-                <label for="email">Correo Electronico</label><input id="email" type="email" name="email"> <br>
-                <label for="nCuenta">Numero de Cuenta:</label><input id="nCuenta" type="number" name="nCuenta"> <br>
-                <label for="list">Selecciona Tu Semestre</label><input type="list" list="semestre"><br>
+            
+                <label for="nombre">Nombre: </label>
+                <input id="nombre" type="text" name="nombre"> <br>
+            
+                <label for="apellido1">Primer Apellido:</label>
+                <input id="apellido1" type="text" name="apellido1"> <br>
+            
+                <label for="apellido2">Segundo Apellido:</label>
+                <input id="apellido2" type="text" name="apellido2"> <br>
+            
+                <label for="email">Correo Electronico</label>
+                <input id="email" type="email" name="correo"> <br>
+            
+                <label for="nCuenta">Numero de Cuenta:</label>
+                <input id="nCuenta" type="number" name="nCuenta"> <br>
+            
+                <label for="list">Selecciona Tu Semestre</label>
+                <input id="semestre" type="list" list="semestre" name="semestre"><br>
                 <datalist id="semestre">
                     <option value="1 Semestre"></option>
-                    <option value="2 Semestre"></option> 
-                    <option value="3 Semestre"></option> 
-                    <option value="4 Semestre"></option> 
-                    <option value="5 Semestre"></option> 
-                    <option value="6 Semestre"></option> 
-                    <option value="7 Semestre"></option> 
-                    <option value="8 Semestre"></option> 
-                    <option value="9 Semestre"></option> 
-                    <option value="10 Semestre"></option> 
+                    <option value="2 Semestre"></option>
+                    <option value="3 Semestre"></option>
+                    <option value="4 Semestre"></option>
+                    <option value="5 Semestre"></option>
+                    <option value="6 Semestre"></option>
+                    <option value="7 Semestre"></option>
+                    <option value="8 Semestre"></option>
+                    <option value="9 Semestre"></option>
+                    <option value="10 Semestre"></option>
                 </datalist>
-                <label for="metodo">Metodo De Titulacion:</label><input id="metodo" type="list" list="Metodo de Titulacion"><br>
+            
+                <label for="metodo">Metodo De Titulacion:</label>
+                <input id="metodo" type="list" list="Metodo de Titulacion" name="metodo"><br>
                 <datalist id="Metodo de Titulacion">
                     <option value="1 Semestre"></option>
-                    <option value="2 Semestre"></option> 
-                    <option value="3 Semestre"></option> 
-                    <option value="4 Semestre"></option> 
-                    <option value="5 Semestre"></option> 
-                    <option value="6 Semestre"></option> 
-                    <option value="7 Semestre"></option> 
-                    <option value="8 Semestre"></option> 
-                    <option value="9 Semestre"></option> 
-                    <option value="10 Semestre"></option> 
+                    <option value="2 Semestre"></option>
+                    <option value="3 Semestre"></option>
+                    <option value="4 Semestre"></option>
+                    <option value="5 Semestre"></option>
+                    <option value="6 Semestre"></option>
+                    <option value="7 Semestre"></option>
+                    <option value="8 Semestre"></option>
+                    <option value="9 Semestre"></option>
+                    <option value="10 Semestre"></option>
                 </datalist>
-                <label for="contraseña">Contraseña</label><input id="contra" type="text" name="contraseña"> <br>
+            
+                <label for="contraseña">Contraseña</label>
+                <input id="contra" type="password" name="contraseña"> <br>
+            
                 <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
             </form>
+          </div>  
+            <div id="registerForm" class="form-container1">
+                <form action="login.php" method="post">
+                    <h2 id="tit2">INICIAR SESION</h2><br>
+                    <label for="registerName">Numero de Cuenta:</label>
+                    <input type="text" id="registerName" name="registerName" required><br>
+            
+                    <label for="registerEmail">Correo:</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required><br>
+            
+                    <label for="registerPassword">Contraseña:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required><br>
+            
+                    <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
+                </form>
+            </div>
+            
         </div>
-
-        <div id="registerForm" class="form-container1">
-            <form>
-                <h2 id="tit2">INICIAR SESION</h2><br>
-                <label for="registerName">Numero de Cuenta:</label>
-                <input type="text" id="registerName" required><br>
-                <label for="registerEmail">Correo:</label>
-                <input type="email" id="registerEmail" required><br>
-                <label for="registerPassword">Contraseña:</label>
-                <input type="password" id="registerPassword" required><br>
-                <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
-            </form>
-        </div>
-    </div>
+   
 
     <footer>
         <div class="footer">
