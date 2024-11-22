@@ -57,34 +57,36 @@
                 <label for="nCuenta">Numero de Cuenta:</label>
                 <input id="nCuenta" type="number" name="nCuenta"> <br>
             
-                <label for="list">Selecciona Tu Semestre</label>
-                <input id="semestre" type="list" list="semestre" name="semestre"><br>
-                <datalist id="semestre">
-                    <option value="1 Semestre"></option>
-                    <option value="2 Semestre"></option>
-                    <option value="3 Semestre"></option>
-                    <option value="4 Semestre"></option>
-                    <option value="5 Semestre"></option>
-                    <option value="6 Semestre"></option>
-                    <option value="7 Semestre"></option>
-                    <option value="8 Semestre"></option>
-                    <option value="9 Semestre"></option>
-                    <option value="10 Semestre"></option>
-                </datalist>
+                <label for="semestre">Selecciona Tu Semestre</label>
+<input id="semestre" type="text" list="semestres" name="semestre"><br>
+<datalist id="semestres">
+    <option value="1 Semestre"></option>
+    <option value="2 Semestre"></option>
+    <option value="3 Semestre"></option>
+    <option value="4 Semestre"></option>
+    <option value="5 Semestre"></option>
+    <option value="6 Semestre"></option>
+    <option value="7 Semestre"></option>
+    <option value="8 Semestre"></option>
+    <option value="9 Semestre"></option>
+    <option value="10 Semestre"></option>
+</datalist>
+
             
                 <label for="metodo">Metodo De Titulacion:</label>
                 <input id="metodo" type="list" list="Metodo de Titulacion" name="metodo"><br>
                 <datalist id="Metodo de Titulacion">
-                    <option value="1 Semestre"></option>
-                    <option value="2 Semestre"></option>
-                    <option value="3 Semestre"></option>
-                    <option value="4 Semestre"></option>
-                    <option value="5 Semestre"></option>
-                    <option value="6 Semestre"></option>
-                    <option value="7 Semestre"></option>
-                    <option value="8 Semestre"></option>
-                    <option value="9 Semestre"></option>
-                    <option value="10 Semestre"></option>
+                    <option value="Titulación mediante tesis o tesina y examen profesional"></option>
+                    <option value="Titulación por actividad de investigación en su alternativa de tesis o tesina"></option>
+                    <option value="Titulación por actividad de apoyo a la docencia"></option>
+                    <option value="Titulación por trabajo profesional"></option>
+                    <option value="Titulación por servicio social"></option>
+                    <option value="Titulación por actividad de investigación en su alternativa de artículo académico"></option>
+                    <option value="Titulación mediante examen general de conocimientos (externo)"></option>
+                    <option value="Titulación por totalidad de créditos y alto nivel académico"></option>
+                    <option value="Titulación mediante estudios en posgrado"></option>
+                    <option value="Titulación por ampliación y profundización de conocimientos en su alternativa de cursos o diplomados de educación continua"></option>
+                    <option value="Titulación por ampliación y profundización de conocimientos en su alternativa de semestre adicional"></option>
                 </datalist>
             
                 <label for="contraseña">Contraseña</label>
@@ -93,11 +95,12 @@
                 <input id="enviar" type="submit" name="enviar" placeholder="ENVIAR">
             </form>
           </div>  
+
             <div id="registerForm" class="form-container1">
-                <form action="login.php" method="post">
+                <form action="iniciosesion.php" method="post">
                     <h2 id="tit2">INICIAR SESION</h2><br>
                     <label for="registerName">Numero de Cuenta:</label>
-                    <input type="text" id="registerName" name="registerName" required><br>
+                    <input type="number" id="registerName" name="registerName" required><br>
             
                     <label for="registerEmail">Correo:</label>
                     <input type="email" id="registerEmail" name="registerEmail" required><br>
